@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProductCard } from './productcard'
 import { ArrowRightIcon } from 'lucide-react'
+
 export const ProductShowcase = () => {
   const products = [
     {
@@ -31,21 +32,24 @@ export const ProductShowcase = () => {
       origin: 'UK Drop',
     },
   ]
+
   return (
-    <section className="py-20 bg-[#28251F]">
+    <section className="py-20 bg-[#000]">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-['Playfair_Display'] text-white">
-            Fresh <span className="text-[#927556]">Stock</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-['Playfair_Display'] text-white animate__animated animate__fadeInLeft">
+            Fresh <span className="text-[#EA7000]">Stock</span>
           </h2>
-          <button className=" text-white flex items-center space-x-2  hover:text-gray-700 transition-colors ">
+          <button className="text-white flex items-center space-x-2 hover:text-[#EA7000] transition-colors group">
             <span>View all</span>
-            <ArrowRightIcon size={18} />
+            <ArrowRightIcon size={18} className="group-hover:translate-x-2 transition-transform" />
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
+            <div className="animate__animated animate__fadeInUp" key={index}>
+              <ProductCard {...product} />
+            </div>
           ))}
         </div>
       </div>

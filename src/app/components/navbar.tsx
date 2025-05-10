@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { MenuIcon, ShoppingBagIcon, XIcon } from 'lucide-react'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  // Close drawer when escape is pressed or background is clicked
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsOpen(false)
@@ -18,41 +18,34 @@ export const Navbar = () => {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <nav className="bg-[#28251F] py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 border-b border-[#927556]/20">
+    <nav className="bg-white py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-md">
       <div className="flex items-center">
-        <h1 className="text-2xl font-bold font-['Playfair_Display']">
-          <span className="text-[#7C1009]">Sneakers</span> Gidi
-        </h1>
+        <Link href="/" className="text-2xl font-bold font-['Playfair_Display'] text-black hover:text-[#C44A00] transition-colors">
+          <span className="text-[#C44A00]">Sneakers</span>{' '}
+          <span className="text-black">Gidi</span>
+        </Link>
       </div>
 
       {/* Desktop Nav */}
-      <div className="hidden md:flex items-center space-x-8 text-white">
-        <a href="#" className="hover:text-[#927556] transition-colors">
-          Home
-        </a>
-        <a href="#" className="hover:text-[#927556] transition-colors">
-          Shop
-        </a>
-        <a href="#" className="hover:text-[#927556] transition-colors">
-          About
-        </a>
-        <a href="#" className="hover:text-[#927556] transition-colors">
-          Contact
-        </a>
+      <div className="hidden md:flex items-center space-x-8 text-black">
+        <a href="#" className="hover:text-[#F3D723] transition-colors">Home</a>
+        <a href="#" className="hover:text-[#F3D723] transition-colors">Shop</a>
+        <a href="#" className="hover:text-[#F3D723] transition-colors">About</a>
+        <a href="#" className="hover:text-[#F3D723] transition-colors">Contact</a>
       </div>
 
       {/* Right Icons */}
-      <div className="flex items-center space-x-4 text-white">
+      <div className="flex items-center space-x-4 text-black">
         <a
           href="#"
-          className="p-2 hover:bg-[#480800]/10 rounded-full transition-colors"
+          className="p-2 hover:bg-[#EA7000]/10 rounded-full transition-colors"
           aria-label="Cart"
         >
           <ShoppingBagIcon size={20} />
         </a>
         <button
           onClick={() => setIsOpen(true)}
-          className="md:hidden p-2 hover:bg-[#480800]/10 rounded-full transition-colors"
+          className="md:hidden p-2 hover:bg-[#EA7000]/10 rounded-full transition-colors"
           aria-label="Menu"
         >
           <MenuIcon size={20} />
@@ -62,50 +55,26 @@ export const Navbar = () => {
       {/* Mobile Drawer */}
       {isOpen && (
         <>
-          {/* Overlay */}
-          <div
-            className="fixed inset-0 bg-black/40 z-40"
-            onClick={closeMenu}
-          ></div>
+          <div className="fixed inset-0 bg-black/40 z-40" onClick={closeMenu}></div>
 
-          {/* Drawer Panel */}
-          <div className="fixed top-0 left-0 w-64 h-full bg-[#28251F] z-50 shadow-lg p-6 flex flex-col space-y-6 transition-all duration-300">
+          <div className="fixed top-0 left-0 w-64 h-full bg-[#fff] z-50 shadow-lg p-6 flex flex-col space-y-6 transition-all duration-300">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold text-[#927556]">Menu</h2>
-              <button
-                onClick={closeMenu}
-                className="text-white hover:text-[#927556] transition"
-              >
+              <h2 className="text-xl font-bold text-[#C44A00]">Menu</h2>
+              <button onClick={closeMenu} className="text-black hover:text-[#C44A00] transition">
                 <XIcon size={22} />
               </button>
             </div>
 
-            <a
-              href="#"
-              onClick={closeMenu}
-              className="text-white hover:text-[#927556] transition"
-            >
+            <a href="#" onClick={closeMenu} className="text-black hover:text-[#EA7000] transition">
               Home
             </a>
-            <a
-              href="#"
-              onClick={closeMenu}
-              className="text-white hover:text-[#927556] transition"
-            >
+            <a href="#" onClick={closeMenu} className="text-black hover:text-[#EA7000] transition">
               Shop
             </a>
-            <a
-              href="#"
-              onClick={closeMenu}
-              className="text-white hover:text-[#927556] transition"
-            >
+            <a href="#" onClick={closeMenu} className="text-black hover:text-[#EA7000] transition">
               About
             </a>
-            <a
-              href="#"
-              onClick={closeMenu}
-              className="text-white hover:text-[#927556] transition"
-            >
+            <a href="#" onClick={closeMenu} className="text-black hover:text-[#EA7000] transition">
               Contact
             </a>
           </div>
