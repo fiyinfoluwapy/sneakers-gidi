@@ -29,7 +29,7 @@ export const Footer = () => {
               <span>Sneakers</span> Gidi
             </motion.h3>
             <p className="mb-6 text-white/80">
-              We don't sell shoes. We sell second chances at first impressions.
+              We don&rsquo;t sell shoes. We sell second chances at first impressions.
             </p>
             <div className="flex space-x-4">
               <SocialLink icon={<InstagramIcon size={20} />} />
