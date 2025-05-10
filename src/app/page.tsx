@@ -14,7 +14,7 @@ export default function Home() {
         Coming Soon
       </h1>
       <p className="text-lg text-white/80 max-w-md mb-8">
-        We're cooking up something fresh for your feet. <br />
+        We&rsquo;re cooking up something fresh for your feet. <br />
         Stay tuned. Stay original. Stay Gidi.
       </p>
       <a
