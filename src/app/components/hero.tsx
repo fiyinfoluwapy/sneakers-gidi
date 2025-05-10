@@ -14,7 +14,7 @@ export const Hero = () => {
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-20">
         <div className="max-w-2xl">
-          <span className="inline-block bg-[#7C1009] text-white px-3 py-1 text-sm rounded-full mb-6">
+          <span className="inline-block bg-[#7C1009] text-white px-3 py-1 text-sm rounded-full mb-3 mt-6">
             Fresh Drops Weekly
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-['Playfair_Display'] leading-tight text-[#FBBC05]">
