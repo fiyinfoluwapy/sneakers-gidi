@@ -6,6 +6,7 @@ import { Hero } from "./components/hero";
 import { WhyWeExist } from "./components/why";
 import { ProductShowcase } from "./components/productshowcase";
 import { TrustSection } from "./components/trust";
+import { Footer } from "./components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <WhyWeExist />
         <ProductShowcase />
         <TrustSection />
+        <Footer />
         {children}
       </body>
     </html>

@@ -59,7 +59,7 @@ export const WhyWeExist = () => {
               transition={{ duration: 1, delay: 0.4 }}
             />
             <motion.img
-              src="https://images.unsplash.com/photo-1600054904350-1d493ae5f922?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
+              src="https://i.pinimg.com/736x/3b/8c/b7/3b8cb7b83b61e29b1c92b4d921d95b30.jpg"
               alt="Authentic sneakers collection"
               className="w-full h-[450px] object-cover rounded-lg relative z-10"
               whileHover={{ scale: 1.05 }}
